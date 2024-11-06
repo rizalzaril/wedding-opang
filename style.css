@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --pink: #f14e95;
+  --bg: #0a0a0a;
+  --shadow: 0 2px 2px rgba(0 0 0 / 0.5);
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Work Sans", sans-serif;
+  min-height: 4000px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./img/hero-bg.jpg");
+  background-size: cover; /* Scales image to cover the area */
+  background-position: center; /* Centers the background image */ /* Adjusts transparency for better readability */
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero {
+  min-height: 100vh;
+}
+
+.hero h1 {
+  font-family: "Ephesis", cursive;
+  font-weight: 500;
+  font-size: 4rem;
+}
+
+.hero h4 {
+  font-size: 1.6;
+  font-weight: 400;
+}
+
+.hero p {
+  font-size: 1.4rem;
+}
+
+.hero h1,
+.hero h4,
+.hero p {
+  text-shadow: var(--shadow);
+}
+
+.hero a {
+  color: var(--pink);
+  background-color: white;
+}
+
+.hero a:hover {
+  background-color: var(--pink);
+  color: white;
+}
+
+.navbar-brand {
+  font-family: "Ephesis", cursive;
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.offcanvas-header .offcanvas-title {
+  font-family: "Ephesis", cursive;
+  font-weight: 500;
+  font-size: 6rem;
+  text-align: center;
+}
+
+.my-navbar .nav-link {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 7%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  overflow: hidden;
+  width: 80%;
+  background-color: var(--pink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  border-radius: 25px;
+  box-shadow: var(--shadow);
+}
+
+.bottom-nav ul {
+  margin: auto;
+  padding: 12px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottom-nav ul li {
+  list-style: none;
+}
+
+.bottom-nav ul li a {
+  text-decoration: none;
+}
+
+/* Responsive Settings */
+
+/* Laptop */
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 70px;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 60px;
+    margin: 5px;
+  }
+
+  .my-navbar .nav-link {
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .navbar-brand {
+    font-size: 6rem;
+  }
+
+  .bottom-nav {
+    display: block;
+  }
+
+  .bottom-nav ul li a {
+    text-decoration: none;
+    font-size: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  html {
+    font-size: 60%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 45px;
+    margin: 3;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 35px;
+    margin: 1;
+  }
+}
+
+@media (max-width: 350px) {
+  html {
+    font-size: 40%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 25px;
+    margin: 1;
+  }
+}
