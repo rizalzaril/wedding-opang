@@ -229,7 +229,7 @@ h1 {
   top: 1;
   left: 0;
   width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  height: 200%; /* Full height */
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     /* Dark gradient overlay */ url("./img/door.png");
 
@@ -283,7 +283,7 @@ h1 {
   top: 1;
   left: 0;
   width: 100%; /* Full width */
-  height: 200%; /* Full height */
+  height: 100%; /* Full height */
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     /* Dark gradient overlay */ url("./img/romantic-bg.png");
 
