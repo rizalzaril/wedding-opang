@@ -178,13 +178,13 @@ h1 {
 
 .col-home-scroll-up {
   opacity: 0; /* Hidden initially */
-  transform: translateX(-1000px); /* Move off-center initially */
+  transform: translateX(-100px); /* Move off-center initially */
   transition: opacity 0 0.3s ease, transform 0.3s ease;
 }
 
 .col-home-scroll-down {
   opacity: 0; /* Hidden initially */
-  transform: translateX(1000px); /* Move off-center initially */
+  transform: translateX(100px); /* Move off-center initially */
   transition: opacity 0 0.3s ease, transform 0.3s ease;
 }
 
@@ -386,6 +386,16 @@ h1 {
   .simply-countdown > .simply-section {
     padding: 45px;
     margin: 3;
+  }
+
+  .img-home-up {
+    border-radius: 20px 20px 200px;
+    width: 100%;
+  }
+
+  .img-home-down {
+    border-radius: 20px 20px 20px 200px;
+    width: 100%;
   }
 
   .img-floral-story-up {
