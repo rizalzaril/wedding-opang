@@ -195,6 +195,71 @@ h1 {
   background-repeat: no-repeat; /* Prevent repeating the image */
 }
 
+.img-rose-story-up {
+  width: 50%;
+  position: relative;
+  bottom: 200px;
+  float: right;
+  animation: sway 5s ease-in-out infinite;
+  transform-origin: bottom center; /* Anchor the animation to the bottom */
+}
+
+.img-floral-story-up {
+  width: 50%;
+  position: absolute;
+  animation: sway 5s ease-in-out infinite;
+  transform-origin: bottom center; /* Anchor the animation to the bottom */
+}
+
+@keyframes sway {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(2deg) scale(1.02);
+  }
+  50% {
+    transform: rotate(0deg) scale(1);
+  }
+  75% {
+    transform: rotate(-2deg) scale(1.02);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.gallery {
+  min-height: 100vh;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.1),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2),
+    white
+  );
+}
+
+.gallery::before {
+  content: "";
+  position: absolute;
+  top: 1;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    /* Dark gradient overlay */ url("./img/romantic-bg.png");
+
+  background-size: cover; /* Scales image to cover the area */
+  background-position: center; /* Centers the background image */
+  z-index: -1;
+  background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
 /* Responsive Settings */
 
 /* desktop */
@@ -216,6 +281,10 @@ h1 {
 
   .bottom-nav {
     display: none;
+  }
+
+  .img-floral-story-up {
+    width: 30%;
   }
 }
 /* Tablet */
@@ -256,6 +325,19 @@ h1 {
   .heading-2-title {
     font-size: 2.5rem;
   }
+
+  .img-floral-story-up {
+    width: 40%;
+  }
+
+  .img-rose-story-up {
+    width: 50%;
+    position: inline-block;
+    bottom: 200px;
+    float: right;
+    animation: sway 5s ease-in-out infinite;
+    transform-origin: bottom center; /* Anchor the animation to the bottom */
+  }
 }
 
 /* Mobile */
@@ -267,6 +349,19 @@ h1 {
   .simply-countdown > .simply-section {
     padding: 45px;
     margin: 3;
+  }
+
+  .img-floral-story-up {
+    width: 50%;
+  }
+
+  .img-rose-story-up {
+    width: 50%;
+    position: inline-block;
+    bottom: 220px;
+    float: right;
+    animation: sway 5s ease-in-out infinite;
+    transform-origin: bottom center; /* Anchor the animation to the bottom */
   }
 }
 
