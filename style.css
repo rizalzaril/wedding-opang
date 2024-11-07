@@ -190,6 +190,9 @@ h1 {
 
 .info {
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .info a {
@@ -209,18 +212,20 @@ h1 {
   top: 0;
   left: 0;
   width: 100%; /* Full width */
-  height: 150%; /* Full height */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    /* Dark gradient overlay */ url("./img/door.png");
-
+  height: 100%; /* Full height */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./img/hero-bg.jpg");
   background-size: cover; /* Scales image to cover the area */
-  background-position: center; /* Centers the background image */
+  background-position: center; /* Centers the background image */ /* Adjusts transparency for better readability */
   z-index: -1;
-  background-repeat: no-repeat; /* Prevent repeating the image */
+  background-size: cover;
+  background-position: center;
 }
-
 .story {
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .story::before {
@@ -229,9 +234,9 @@ h1 {
   top: 1;
   left: 0;
   width: 100%; /* Full width */
-  height: 200%; /* Full height */
+  height: 100%; /* Full height */
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    /* Dark gradient overlay */ url("./img/door.png");
+    /* Dark gradient overlay */ url("./img/hero-bg.jpg");
 
   background-size: cover; /* Scales image to cover the area */
   background-position: center; /* Centers the background image */
