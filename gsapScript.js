@@ -62,6 +62,33 @@ gsap.to(".h1-scroll-story", {
   duration: 1,
 });
 
+gsap.to(".h1-scroll-gallery", {
+  scrollTrigger: {
+    trigger: ".h1-scroll-gallery",
+    // start: "top center",
+    // markers: true,
+    toggleActions: "restart pause resume none",
+  },
+  x: 0, // Move to center
+  opacity: 1, // Make it visible
+  duration: 1,
+});
+
+// Animate each section as it comes into view
+let sections = gsap.utils.toArray(".love-story");
+
+gsap.to(sections, {
+  xPercent: -100 * (sections.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".scroll-container",
+    pin: true,
+    scrub: 1,
+    snap: 1 / (sections.length - 1),
+    end: () => "+=" + document.querySelector(".scroll-container").offsetWidth,
+  },
+});
+
 gsap.to(".col-home-scroll-up", {
   scrollTrigger: {
     trigger: ".col-home-scroll-up",

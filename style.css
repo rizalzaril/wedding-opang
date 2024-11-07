@@ -10,7 +10,10 @@
 body {
   font-size: 1.2rem;
   font-family: "Work Sans", sans-serif;
-  /* min-height: 4000px; */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #0a0a0a;
 }
 
 .hero::before {
@@ -50,6 +53,12 @@ h1 {
 }
 
 .h1-scroll-story {
+  opacity: 0; /* Hidden initially */
+  transform: translateX(-1000px); /* Move off-center initially */
+  transition: opacity 0 0.3s ease, transform 0.3s ease;
+}
+
+.h1-scroll-gallery {
   opacity: 0; /* Hidden initially */
   transform: translateX(-1000px); /* Move off-center initially */
   transition: opacity 0 0.3s ease, transform 0.3s ease;
@@ -245,6 +254,10 @@ h1 {
   overflow: hidden;
 }
 
+.gallery p {
+  color: yellow;
+}
+
 .background-video {
   position: absolute;
   top: 0;
@@ -322,6 +335,29 @@ h1 {
 
 .love-story {
   min-height: 100vh;
+}
+
+.scroll-container {
+  display: flex;
+  /* overflow-x: auto; */
+  scroll-snap-type: x mandatory;
+  width: 100vw;
+  height: 100vh;
+}
+
+.love-story {
+  flex: 0 0 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  background-color: #333; /* Adjust background as needed */
+}
+
+/* Optional: Smooth scroll for non-GSAP supported browsers */
+.scroll-container {
+  scroll-behavior: smooth;
 }
 
 .love-story::before {
@@ -487,6 +523,12 @@ h1 {
   .simply-countdown > .simply-section {
     padding: 35px;
     margin: 1;
+  }
+
+  .love-story {
+    flex: 0 0 100%; /* Ensures full width on very small screens */
+    padding: 3em 1em; /* Larger padding for readability */
+    height: 200%;
   }
 }
 
