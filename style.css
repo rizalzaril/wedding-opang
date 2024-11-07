@@ -1,15 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --pink: #f14e95;
+  --pink: #d4af37;
   --bg: #0a0a0a;
+  --pink-bg: #fff1f7;
   --shadow: 0 2px 2px rgba(0 0 0 / 0.5);
 }
 
 body {
   font-size: 1.2rem;
   font-family: "Work Sans", sans-serif;
-  min-height: 4000px;
+  /* min-height: 4000px; */
 }
 
 .hero::before {
@@ -19,13 +20,39 @@ body {
   left: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("./img/hero-bg.jpg");
   background-size: cover; /* Scales image to cover the area */
   background-position: center; /* Centers the background image */ /* Adjusts transparency for better readability */
   z-index: -1;
   background-size: cover;
   background-position: center;
+}
+
+h1 {
+  font-family: "Ephesis", cursive;
+  font-weight: 500;
+  font-size: 4rem;
+}
+
+/* .heading-title {
+  padding-top: 75px;
+} */
+
+.heading-2-title {
+  font-size: 3rem;
+}
+
+.h1-scroll {
+  opacity: 0; /* Hidden initially */
+  transform: translateX(-1000px); /* Move off-center initially */
+  transition: opacity 0 0.3s ease, transform 0.3s ease;
+}
+
+.h1-scroll-story {
+  opacity: 0; /* Hidden initially */
+  transform: translateX(-1000px); /* Move off-center initially */
+  transition: opacity 0 0.3s ease, transform 0.3s ease;
 }
 
 .hero {
@@ -36,6 +63,7 @@ body {
   font-family: "Ephesis", cursive;
   font-weight: 500;
   font-size: 4rem;
+  transition: ease-in 1s;
 }
 
 .hero h4 {
@@ -114,6 +142,59 @@ body {
   text-decoration: none;
 }
 
+.smooth-wrapper {
+  padding-top: 0px;
+  padding-bottom: 100vh; /* Extra padding to enable scroll */
+}
+
+.img-home-up {
+  border-radius: 20px 20px 200px;
+  width: 80%;
+}
+
+.img-home-down {
+  border-radius: 20px 20px 20px 200px;
+  width: 80%;
+}
+
+.col-home-scroll-up {
+  opacity: 0; /* Hidden initially */
+  transform: translateX(-1000px); /* Move off-center initially */
+  transition: opacity 0 0.3s ease, transform 0.3s ease;
+}
+
+.col-home-scroll-down {
+  opacity: 0; /* Hidden initially */
+  transform: translateX(1000px); /* Move off-center initially */
+  transition: opacity 0 0.3s ease, transform 0.3s ease;
+}
+
+.info {
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 0.6),
+    white
+  );
+}
+
+.info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    /* Dark gradient overlay */ url("./img/door.png");
+
+  background-size: cover; /* Scales image to cover the area */
+  background-position: center; /* Centers the background image */
+  z-index: -1;
+  background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
 /* Responsive Settings */
 
 /* desktop */
@@ -156,7 +237,11 @@ body {
   }
 
   .navbar-brand {
-    font-size: 6rem;
+    font-size: 4rem;
+  }
+
+  .navbar {
+    padding: 0px;
   }
 
   .bottom-nav {
@@ -165,6 +250,10 @@ body {
 
   .bottom-nav ul li a {
     text-decoration: none;
+    font-size: 2.5rem;
+  }
+
+  .heading-2-title {
     font-size: 2.5rem;
   }
 }

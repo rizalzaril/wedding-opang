@@ -22,6 +22,10 @@
       href="./assets/simplyCountdown.js-master/css/simplyCountdown.theme.default.css"
     />
     <link rel="stylesheet" href="./style.css" />
+
+    <!-- Pattern css -->
+    <link href="https://unpkg.com/pattern.css" rel="stylesheet" />
+    <!-- End Pattern css -->
   </head>
   <body>
     <!-- hero section -->
@@ -32,102 +36,18 @@
       <main>
         <h4>Kepada Bpk/Ibu/Saudara/I,</h4>
 
-        <h1 class="">Abdurrahman Naufal & Anggi</h1>
+        <h1 class="">Fulan & Fulanna</h1>
         <p>Akan melangsungkan resepsi pernikahan dalam:</p>
 
         <div class="simply-countdown"></div>
 
-        <a href="#undangan" class="btn btn-lg mt-4 shadow-sm">Lihat Undangan</a>
+        <a href="./content.html" class="btn btn-lg mt-4 shadow-sm">Lihat Undangan</a>
       </main>
     </section>
     <!-- end hero section -->
 
-    <!-- navbar section -->
-    <nav class="navbar my-navbar navbar-expand-md bg-body-tertiary sticky-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Naugi</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Naugi</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#home"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-black" href="#info">Info</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-black" href="#story">Story</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-black" href="#gallery">Gallery</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-black" href="#rsvp">RSVP</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-black" href="#gifts">Gifts</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- end navbar section -->
-
-    <!-- bottom navigation -->
-    <nav id="bottomNav" class="bottom-nav text-center">
-      <ul>
-        <li>
-          <a href="" class="text-white"><i class="fa-solid fa-house"></i></a>
-        </li>
-        <li>
-          <a class="text-white" href=""><i class="fa-solid fa-info"></i></a>
-        </li>
-        <li>
-          <a class="text-white" href=""><i class="fa-solid fa-book"></i></a>
-        </li>
-        <li>
-          <a class="text-white" href=""
-            ><i class="fa-solid fa-photo-film"></i
-          ></a>
-        </li>
-        <li>
-          <a class="text-white" href=""
-            ><i class="fa-solid fa-pen-to-square"></i
-          ></a>
-        </li>
-        <li>
-          <a class="text-white" href=""><i class="fa-solid fa-gift"></i></a>
-        </li>
-      </ul>
-    </nav>
-    <!-- end bottom navigation -->
+   
+    </main>
 
     <script src="./assets/simplyCountdown.js-master/dist/simplyCountdown.min.js"></script>
     <script
@@ -135,6 +55,13 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollSmoother.min.js"></script>
+
+    <script src="./gsapScript.js"></script>
     <script src="./script.js"></script>
     <script src="./hideBottomNav.js"></script>
 
