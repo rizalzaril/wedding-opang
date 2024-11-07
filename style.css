@@ -339,10 +339,15 @@ h1 {
 
 .scroll-container {
   display: flex;
-  /* overflow-x: auto; */
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
   width: 100vw;
   height: 100vh;
+}
+
+.love-story {
+  min-width: 100vw;
+  min-height: 100vh; /* Minimum height ensures it adapts to screen size */
 }
 
 .love-story {
