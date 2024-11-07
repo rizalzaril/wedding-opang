@@ -339,7 +339,6 @@ h1 {
 
 .scroll-container {
   display: flex;
-  overflow-x: auto;
   scroll-snap-type: x mandatory;
   width: 100vw;
   height: 100vh;
@@ -462,6 +461,10 @@ h1 {
 
   .card-info .card-info-content {
     width: 300px;
+  }
+
+  .scroll-container {
+    overflow-x: auto;
   }
 }
 
