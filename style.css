@@ -219,6 +219,10 @@ h1 {
   background-repeat: no-repeat; /* Prevent repeating the image */
 }
 
+.story {
+  min-height: 100vh;
+}
+
 .story::before {
   content: "";
   position: absolute;
