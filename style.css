@@ -466,6 +466,11 @@ h1 {
   .scroll-container {
     overflow-x: auto;
   }
+
+  .love-story {
+    min-height: 100vh; /* Maintains full height */
+    padding: 2em 1em; /* Adds more padding on small screens */
+  }
 }
 
 /* Mobile */
