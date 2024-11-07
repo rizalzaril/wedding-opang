@@ -430,7 +430,7 @@ h1 {
   }
 
   .bottom-nav {
-    display: block;
+    display: none;
   }
 
   .bottom-nav ul li a {
