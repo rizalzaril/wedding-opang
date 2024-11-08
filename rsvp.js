@@ -59,7 +59,7 @@ async function fetchData() {
       const data = doc.data();
       dataCarousel.innerHTML += `
     
-        <div class="item" style="margin-top:100px">
+        <div class="card p-3 mt-5" >
             <p><strong>Nama:</strong> ${data.nama}</p>
             <p><strong>Status Kehadiran:</strong> ${
               data.status === "1"
@@ -79,10 +79,9 @@ async function fetchData() {
     $(".owl-carousel").owlCarousel({
       loop: false,
       margin: 30,
-
-      nav: true,
+      dots: false,
       autoplay: true,
-      autoplayTimeout: 1000,
+      autoplayTimeout: 5000,
       autoplayHoverPause: true,
       responsive: {
         0: {
