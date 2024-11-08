@@ -274,6 +274,20 @@ h1 {
   color: yellow;
 }
 
+.gallery img {
+  transition: transform 0.4s ease, background-color 0.4s ease; /* Smooth transition for transform and background-color */
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+.gallery-shadow-img img {
+  box-shadow: 5px 8px 12px -3px rgba(0, 0, 0, 0.65);
+  -webkit-box-shadow: 5px 8px 12px -3px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 5px 8px 12px -3px rgba(0, 0, 0, 0.65);
+}
+
 .background-video {
   position: absolute;
   top: 0;
