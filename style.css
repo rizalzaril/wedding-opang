@@ -187,6 +187,10 @@ h1 {
   padding-bottom: 100vh; /* Extra padding to enable scroll */
 }
 
+.text-quotes {
+  padding-top: 200px;
+}
+
 .img-home-up {
   border-radius: 20px 20px 200px;
   width: 80%;
@@ -321,7 +325,7 @@ h1 {
 }
 
 .img-floral-story-up {
-  width: 50%;
+  width: 25%;
   position: absolute;
   animation: sway 5s ease-in-out infinite;
   transform-origin: bottom center; /* Anchor the animation to the bottom */
@@ -462,6 +466,15 @@ h1 {
     font-size: 2.5rem;
   }
 
+  .text-quotes {
+    padding-top: 100px;
+    width: 300px;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    margin: 0 auto; /* Ensures it centers horizontally if the parent container has space */
+  }
+
   .img-floral-story-up {
     width: 40%;
   }
@@ -518,7 +531,7 @@ h1 {
 /* Mobile */
 @media (max-width: 576px) {
   html {
-    font-size: 65%;
+    font-size: 70%;
   }
 
   .simply-countdown > .simply-section {
@@ -551,6 +564,7 @@ h1 {
 
   .card-info {
     width: 350px;
+    height: 300px;
   }
 
   .card-info .card-info-content {
@@ -572,7 +586,7 @@ h1 {
 
 @media (max-width: 450px) {
   html {
-    font-size: 65%;
+    font-size: 75%;
   }
 
   .simply-countdown > .simply-section {

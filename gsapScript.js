@@ -23,32 +23,53 @@
 
 // gsap.registerPlugin(ScrollTrigger);
 
-// gsap.to(".card-2", {
-//   scrollTrigger: {
-//     trigger: ".card-1",
-//     start: "top center",
-//     endTrigger: ".card-3",
-//     markers: true,
-//     toggleActions: "restart pause resume none",
-//   },
-//   x: 10,
-//   rotation: 360,
-//   duration: 3,
+// // Select all elements with the class .photo
+// document.querySelectorAll(".photo").forEach((photo) => {
+//   gsap.to(photo, {
+//     scrollTrigger: {
+//       trigger: photo,
+//       // start: "top center",
+//       // endTrigger: ".card-3",
+//       scrub: true,
+//       markers: true,
+//       toggleActions: "restart pause resume none",
+//     },
+//     y: 100,
+//     // rotation: 360,
+//     duration: 1,
+//   });
 // });
 
 gsap.registerPlugin(ScrollTrigger);
 
-// gsap.to(".h1-scroll", {
-//   scrollTrigger: {
-//     trigger: ".h1-scroll",
-//     // start: "top center",
-//     // markers: true,
-//     toggleActions: "restart pause resume none",
-//   },
-//   x: 0, // Move to center
-//   opacity: 1, // Make it visible
-//   duration: 1,
-// });
+// Select all elements with the class .photo
+document.querySelectorAll(".photo").forEach((photo) => {
+  gsap.to(photo, {
+    scrollTrigger: {
+      trigger: photo,
+      scrub: false,
+      markers: true,
+      toggleActions: "restart pause resume none",
+    },
+    y: 10,
+    rotationY: 180, // Flip backward
+    duration: 1,
+    onComplete: () => {
+      // After flipping backward, flip forward
+      gsap.to(photo, {
+        rotationY: 0, // Flip forward
+        duration: 1,
+        scrollTrigger: {
+          trigger: photo,
+          scrub: false,
+          markers: false,
+        },
+      });
+    },
+  });
+});
+
+gsap.registerPlugin(ScrollTrigger);
 
 // JavaScript with GSAP
 gsap.utils.toArray(".transition-scale-scroll").forEach((element, index) => {
@@ -67,26 +88,6 @@ gsap.utils.toArray(".transition-scale-scroll").forEach((element, index) => {
     // delay: index * 0.15, // Less delay for more continuity
   });
 });
-
-// Select all sections with the class .love-story
-let sections = gsap.utils.toArray(".love-story");
-
-// Set up the horizontal scroll animation
-// gsap.to(sections, {
-//   xPercent: -100 * (sections.length - 1), // Move each section horizontally by 100%
-//   ease: "none",
-//   scrollTrigger: {
-//     trigger: ".scroll-container", // Container that holds the sections
-//     pin: true, // Pin the container during scroll
-//     scrub: 1, // Smooth, synced scrolling
-//     snap: {
-//       snapTo: 1 / (sections.length - 1), // Snap to each section
-//       duration: 0.2, // Duration of the snapping animation
-//       ease: "power1.inOut", // Smooth snap effect
-//     },
-//     end: () => "+=" + document.querySelector(".scroll-container").scrollWidth, // End after the total scrollable width
-//   },
-// });
 
 gsap.to(".col-home-scroll-up", {
   scrollTrigger: {
