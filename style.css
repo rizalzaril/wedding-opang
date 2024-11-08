@@ -448,6 +448,42 @@ h1 {
   background-repeat: no-repeat; /* Prevent repeating the image */
 }
 
+.rsvp {
+  min-height: 100vh;
+}
+
+.rsvp form label {
+  color: white;
+}
+
+.rsvp button {
+  background-color: #000;
+  color: white;
+  border: solid 1px white;
+}
+
+.rsvp button:hover {
+  background-color: var(--pink);
+  color: black;
+  border: none;
+}
+
+.rsvp::before {
+  content: "";
+  position: absolute;
+  top: 1;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    /* Dark gradient overlay */ url("./img/romantic-bg.png");
+
+  background-size: cover; /* Scales image to cover the area */
+  background-position: center; /* Centers the background image */
+  z-index: -1;
+  background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
 .img-rose-story-up {
   width: 50%;
   position: relative;
@@ -637,7 +673,7 @@ h1 {
   }
 
   .gallery {
-    min-height: 200vh;
+    min-height: 170vh;
   }
 
   .heading-2-title {

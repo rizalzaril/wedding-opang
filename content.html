@@ -288,7 +288,7 @@
       </section>
 
       <!-- end mempelai section -->
-
+      <!-- ////////////////////////////////////////////////////////////////////////////////////////////////// -->
       <!-- story section -->
       <section
         id="story"
@@ -391,7 +391,7 @@
         </div>
       </section>
       <!-- end story section -->
-
+      <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
       <!-- gallery section -->
       <section
         id="gallery"
@@ -500,6 +500,79 @@
         </div>
       </section>
       <!-- end gallery section -->
+
+      <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+      <!-- RSVP section -->
+
+      <section
+        id="rsvp"
+        class="rsvp d-flex justify-content-center align-items-center"
+      >
+        <div class="container">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-md-8 col-10 text-center">
+              <h1 class="heading-title text-white transition-scale-scroll">
+                Rsvp
+              </h1>
+              <article>
+                <p class="text-center text-white transition-scale-scroll">
+                  Silahkan isi form berikut ini untuk konfirmasi kehadiran
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <!-- rsvp form -->
+          <form
+            class="row row-cols-md-auto g-3 align-items-center justify-content-center"
+          >
+            <div class="col-12">
+              <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="nama" name="nama" />
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="mb-3">
+                <label for="jumlahKehadiran" class="form-label"
+                  >Jumlah Kehadiran</label
+                >
+                <input
+                  type="number"
+                  max="5"
+                  length="1"
+                  value="1"
+                  min="1"
+                  class="form-control"
+                  id="jumlahKehadiran"
+                  name="jumlahKehadiran"
+                />
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="mb-3">
+                <label for="status" class="form-label"
+                  >Konfirmasi Kehadiran</label
+                >
+                <select name="status" id="status" class="form-select">
+                  <option selected>Pilih Salah Satu</option>
+                  <option value="1">Hadir</option>
+                  <option value="0">Tidak hadir</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <button class="btn" style="margin-top: 18px">Kirim</button>
+            </div>
+          </form>
+          <!-- end rsvp form -->
+        </div>
+      </section>
+
+      <!-- end RSVP section -->
     </main>
 
     <script src="./assets/simplyCountdown.js-master/dist/simplyCountdown.min.js"></script>
