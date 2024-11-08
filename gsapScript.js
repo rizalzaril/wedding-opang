@@ -91,7 +91,7 @@ let sections = gsap.utils.toArray(".love-story");
 gsap.to(".col-home-scroll-up", {
   scrollTrigger: {
     trigger: ".col-home-scroll-up",
-    start: "top center bottom",
+    // start: "top center bottom",
     //scrub: true,
     // markers: true,
     toggleActions: "restart none restart none",
@@ -104,7 +104,7 @@ gsap.to(".col-home-scroll-up", {
 gsap.to(".col-home-scroll-down", {
   scrollTrigger: {
     trigger: ".col-home-scroll-down",
-    start: "top center bottom",
+    // start: "top center bottom",
     //scrub: true,
     // markers: true,
     toggleActions: "restart none restart none",
