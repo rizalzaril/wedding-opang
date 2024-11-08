@@ -78,7 +78,7 @@ async function fetchData() {
     // Reinitialize Owl Carousel after data is added
     $(".owl-carousel").owlCarousel({
       loop: false,
-      margin: 300,
+      margin: 30,
 
       nav: true,
       autoplay: true,
@@ -86,13 +86,13 @@ async function fetchData() {
       autoplayHoverPause: true,
       responsive: {
         0: {
-          items: 3,
+          items: 1,
         },
         600: {
-          items: 4,
+          items: 2,
         },
         1000: {
-          items: 5,
+          items: 3,
         },
       },
     });
