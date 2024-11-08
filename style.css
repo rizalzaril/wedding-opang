@@ -449,17 +449,36 @@ h1 {
 }
 
 .rsvp {
-  min-height: 100vh;
+  min-height: 200vh;
 }
 
 .rsvp form label {
   color: white;
 }
 
+.rsvp form input {
+  padding: 12px;
+  font-size: 1.3rem;
+}
+
+.rsvp form textarea {
+  padding: 12px;
+  font-size: 1.3rem;
+}
+
+.rsvp form select {
+  padding: 12px;
+  font-size: 1.3rem;
+}
+
 .rsvp button {
   background-color: #000;
   color: white;
   border: solid 1px white;
+  padding: 12px;
+  font-size: 1.3rem;
+  float: right;
+  width: 120px;
 }
 
 .rsvp button:hover {
@@ -474,7 +493,7 @@ h1 {
   top: 1;
   left: 0;
   width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  height: 200%; /* Full height */
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     /* Dark gradient overlay */ url("./img/romantic-bg.png");
 
@@ -567,6 +586,18 @@ h1 {
   background-position: center; /* Centers the background image */
   z-index: -1;
   background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
+.owl-carousel .item {
+  /* Center content within each item */
+  min-width: 300px;
+  padding: 0px 0px;
+  text-align: left;
+}
+
+.owl-carousel {
+  width: 200%; /* Adjust width as needed */
+  margin: 0 auto;
 }
 
 /* Responsive Settings */
@@ -674,6 +705,11 @@ h1 {
 
   .gallery {
     min-height: 170vh;
+  }
+
+  .gallery::before {
+    content: "";
+    height: 170%;
   }
 
   .heading-2-title {
