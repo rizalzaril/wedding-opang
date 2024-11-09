@@ -1,6 +1,8 @@
 // Image sources
 const images = [
   "https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg",
+  "https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg",
+  "https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg",
   "https://i.pinimg.com/564x/91/27/46/912746cbc50756032266eaefcb87a269.jpg",
   // Add other images here...
 ];
@@ -64,33 +66,33 @@ document.getElementById("nextBtn").addEventListener("click", showNextImage);
 document.getElementById("prevBtn").addEventListener("click", showPrevImage);
 
 // Swipe functionality for mobile
-let startX = 0;
-let endX = 0;
-let isSwiping = false;
+// let startX = 0;
+// let endX = 0;
+// let isSwiping = false;
 
-function handleSwipe(event) {
-  if (event.type === "touchstart") {
-    startX = event.touches[0].clientX;
-    isSwiping = true; // Start swipe
-  } else if (event.type === "touchmove" && isSwiping) {
-    endX = event.touches[0].clientX;
-    const offsetX = startX - endX;
+// function handleSwipe(event) {
+//   if (event.type === "touchstart") {
+//     startX = event.touches[0].clientX;
+//     isSwiping = true; // Start swipe
+//   } else if (event.type === "touchmove" && isSwiping) {
+//     endX = event.touches[0].clientX;
+//     const offsetX = startX - endX;
 
-    if (Math.abs(offsetX) > 50) {
-      if (offsetX > 0) {
-        showNextImage(); // Swipe left -> Next image
-      } else {
-        showPrevImage(); // Swipe right -> Previous image
-      }
-      isSwiping = false; // End swipe
-    }
-  } else if (event.type === "touchend") {
-    isSwiping = false; // End swipe on touchend
-  }
-}
+//     if (Math.abs(offsetX) > 50) {
+//       if (offsetX > 0) {
+//         showNextImage(); // Swipe left -> Next image
+//       } else {
+//         showPrevImage(); // Swipe right -> Previous image
+//       }
+//       isSwiping = false; // End swipe
+//     }
+//   } else if (event.type === "touchend") {
+//     isSwiping = false; // End swipe on touchend
+//   }
+// }
 
-// Attach swipe events to the modal image
-const modalImage = document.getElementById("modalImage");
-modalImage.addEventListener("touchstart", handleSwipe);
-modalImage.addEventListener("touchmove", handleSwipe);
-modalImage.addEventListener("touchend", handleSwipe);
+// // Attach swipe events to the modal image
+// const modalImage = document.getElementById("modalImage");
+// modalImage.addEventListener("touchstart", handleSwipe);
+// modalImage.addEventListener("touchmove", handleSwipe);
+// modalImage.addEventListener("touchend", handleSwipe);
