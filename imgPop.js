@@ -3,6 +3,11 @@ const images = [
   "https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg",
   "https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg",
   "https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg",
+  "https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg",
+  "https://i.pinimg.com/564x/42/90/33/42903394deb41cd1a526a1c06a82edd0.jpg",
+  "https://i.pinimg.com/564x/91/27/46/912746cbc50756032266eaefcb87a269.jpg",
+  "https://i.pinimg.com/564x/91/27/46/912746cbc50756032266eaefcb87a269.jpg",
+  "https://i.pinimg.com/564x/91/27/46/912746cbc50756032266eaefcb87a269.jpg",
   "https://i.pinimg.com/564x/91/27/46/912746cbc50756032266eaefcb87a269.jpg",
   // Add other images here...
 ];
@@ -14,7 +19,7 @@ images.map((imageSrc, index) => {
   col.classList.add(
     "col",
     "mt-3",
-    "transition-scale-scroll",
+    "col-home-scroll-up",
     "gallery-shadow-img",
     "transition-flip-360",
     "p-3"
