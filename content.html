@@ -344,42 +344,11 @@
           <!-- photos -->
           <!-- Bootstrap Modal Structure -->
           <div class="container">
-            <div class="row p-3 row-cols-md-4 row-cols-sm-3 row-cols-2">
-              <div
-                class="col mt-3 transition-scale-scroll gallery-shadow-img transition-flip-360 p-3"
-              >
-                <a
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  data-bs-img-src="https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg"
-                  data-bs-index="0"
-                >
-                  <img
-                    class="img-thumbnail rounded-lg"
-                    src="https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg"
-                    alt=""
-                  />
-                </a>
-              </div>
-              <div
-                class="col mt-3 transition-scale-scroll gallery-shadow-img transition-flip-360 p-3"
-              >
-                <a
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#imageModal"
-                  data-bs-img-src="https://i.pinimg.com/564x/91/27/46/912746cbc50756032266eaefcb87a269.jpg"
-                  data-bs-index="1"
-                >
-                  <img
-                    class="img-thumbnail rounded-lg"
-                    src="https://i.pinimg.com/564x/91/27/46/912746cbc50756032266eaefcb87a269.jpg"
-                    alt=""
-                  />
-                </a>
-              </div>
-              <!-- Add more images as needed -->
+            <div
+              class="row p-3 row-cols-md-4 row-cols-sm-3 row-cols-2"
+              id="imgGallery"
+            >
+              <!-- Dynamic content will be inserted here -->
             </div>
           </div>
 
@@ -394,7 +363,6 @@
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
-                  <!-- Close Button -->
                   <button
                     type="button"
                     class="btn-close"
@@ -403,39 +371,20 @@
                   ></button>
                 </div>
 
-                <!-- Carousel-like navigation buttons -->
                 <button
                   id="prevBtn"
                   class="btn btn-link position-absolute top-50 translate-middle-y"
-                  style="
-                    z-index: 999;
-                    color: white;
-                    font-size: 30px;
-                    background: black;
-                    border: solid 1px white;
-                    margin-left: -100px;
-                  "
                 >
                   <i class="fa-solid fa-arrow-left"></i>
                 </button>
                 <button
                   id="nextBtn"
                   class="btn btn-link position-absolute top-50 translate-middle-y"
-                  style="
-                    z-index: 999;
-                    position: absolute;
-                    right: 0;
-                    color: white;
-                    border: solid 1px white;
-                    margin-right: -100px;
-                    font-size: 30px;
-                    background: black;
-                  "
                 >
                   <i class="fa-solid fa-arrow-right"></i>
                 </button>
+
                 <div class="modal-body text-center position-relative">
-                  <!-- Image display -->
                   <img id="modalImage" class="img-fluid" src="" alt="" />
                 </div>
               </div>

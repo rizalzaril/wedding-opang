@@ -1,16 +1,47 @@
-// Image sources and their index
-const imageLinks = document.querySelectorAll('[data-bs-toggle="modal"]');
+// Image sources
 const images = [
   "https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg",
   "https://i.pinimg.com/564x/91/27/46/912746cbc50756032266eaefcb87a269.jpg",
   // Add other images here...
 ];
 
+// Generate gallery dynamically
+const gallery = document.getElementById("imgGallery");
+images.map((imageSrc, index) => {
+  const col = document.createElement("div");
+  col.classList.add(
+    "col",
+    "mt-3",
+    "transition-scale-scroll",
+    "gallery-shadow-img",
+    "transition-flip-360",
+    "p-3"
+  );
+
+  const link = document.createElement("a");
+  link.href = "#";
+  link.setAttribute("data-bs-toggle", "modal");
+  link.setAttribute("data-bs-target", "#imageModal");
+  link.setAttribute("data-bs-img-src", imageSrc);
+  link.setAttribute("data-bs-index", index);
+
+  const img = document.createElement("img");
+  img.classList.add("img-thumbnail", "rounded-lg");
+  img.src = imageSrc;
+  img.alt = "";
+
+  link.appendChild(img);
+  col.appendChild(link);
+  gallery.appendChild(col);
+});
+
+// Modal image update and navigation logic
 let currentIndex = 0; // Track the current image index
 
 // Update modal image when clicked
+const imageLinks = document.querySelectorAll('[data-bs-toggle="modal"]');
 imageLinks.forEach((link) => {
-  link.addEventListener("click", function (event) {
+  link.addEventListener("click", function () {
     currentIndex = parseInt(this.getAttribute("data-bs-index")); // Get the index of clicked image
     document.getElementById("modalImage").src = images[currentIndex];
   });
@@ -32,12 +63,11 @@ function showPrevImage() {
 document.getElementById("nextBtn").addEventListener("click", showNextImage);
 document.getElementById("prevBtn").addEventListener("click", showPrevImage);
 
-// Swipe functionality
+// Swipe functionality for mobile
 let startX = 0;
 let endX = 0;
 let isSwiping = false;
 
-// Detect swipe direction
 function handleSwipe(event) {
   if (event.type === "touchstart") {
     startX = event.touches[0].clientX;
@@ -47,7 +77,6 @@ function handleSwipe(event) {
     const offsetX = startX - endX;
 
     if (Math.abs(offsetX) > 50) {
-      // Determine the swipe direction based on offset
       if (offsetX > 0) {
         showNextImage(); // Swipe left -> Next image
       } else {
