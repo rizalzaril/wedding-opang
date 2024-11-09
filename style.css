@@ -861,6 +861,12 @@ h1 {
     max-width: 90%; /* Ensures it doesn't grow too large on very wide screens */
     margin: 0 auto; /* Centers the modal horizontally */
   }
+
+  #modalImage {
+    transition: transform 3s ease-in-out; /* Smooth slide effect */
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* Mobile */
@@ -995,7 +1001,7 @@ h1 {
   }
 
   #modalImage {
-    transition: transform 0.3s ease-in-out; /* Smooth slide effect */
+    transition: transform 3s ease-in-out; /* Smooth slide effect */
     width: 100%;
     height: auto;
   }
