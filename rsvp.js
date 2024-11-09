@@ -69,12 +69,25 @@ async function saveFormData(event) {
 }
 
 // Function to fetch and display data from Firestore in Owl Carousel
+import {
+  query,
+  orderBy,
+} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+// Function to fetch and display data from Firestore in Owl Carousel
 async function fetchData() {
   const dataCarousel = document.getElementById("dataCarousel");
   dataCarousel.innerHTML = ""; // Clear previous data
 
   try {
-    const querySnapshot = await getDocs(collection(db, "invitations"));
+    // Create a query to fetch the data ordered by timestamp in descending order
+    const invitationsQuery = query(
+      collection(db, "invitations"),
+      orderBy("timestamp", "desc")
+    );
+
+    // Execute the query
+    const querySnapshot = await getDocs(invitationsQuery);
 
     // Check if the carousel is already initialized and destroy it
     if ($(".owl-carousel").data("owl.carousel")) {
