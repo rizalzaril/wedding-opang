@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Share+Tech+Mono&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --pink: #d4af37;
@@ -606,6 +606,29 @@ h1 {
   margin: 0 auto;
 }
 
+.bank-content {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.bank-logo {
+  width: 10%;
+}
+
+.dana-logo {
+  width: 20%;
+}
+
+.bank-number {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 2rem;
+}
+
+.bank-name {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 500;
+}
+
 /* Responsive Settings */
 
 /* desktop */
@@ -789,6 +812,24 @@ h1 {
   .timeline li .timeline-img {
     width: 140px;
     height: 140px;
+  }
+
+  .bank-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .bank-logo {
+    width: 20%;
+  }
+
+  .bank-number {
+    font-size: 2rem;
+  }
+
+  .bank-name {
+    font-size: 1.5rem;
+    font-weight: 500;
   }
 }
 

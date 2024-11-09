@@ -21,13 +21,24 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// Function to save form data
+// Function to save form data with validation
 async function saveFormData(event) {
   event.preventDefault();
 
-  const nama = document.getElementById("nama").value;
-  const status = document.getElementById("status").value;
-  const pesan = document.getElementById("pesan").value;
+  const nama = document.getElementById("nama").value.trim();
+  const status = document.getElementById("status").value.trim();
+  const pesan = document.getElementById("pesan").value.trim();
+
+  // Check if any field is empty
+  if (!nama || !status || !pesan) {
+    Swal.fire({
+      title: "Warning!",
+      text: "Tolong isi semua data.",
+      icon: "warning",
+      confirmButtonText: "OK",
+    });
+    return;
+  }
 
   try {
     await addDoc(collection(db, "invitations"), {
@@ -37,12 +48,23 @@ async function saveFormData(event) {
       timestamp: new Date(),
     });
 
-    alert("Data berhasil disimpan!");
+    Swal.fire({
+      title: "Success!",
+      text: "Data data berhasil terkirim.",
+      icon: "success",
+      confirmButtonText: "OK",
+    });
+
     document.getElementById("formSubmit").reset();
     fetchData(); // Refresh carousel data
   } catch (error) {
     console.error("Error adding document: ", error);
-    alert("Gagal menyimpan data, coba lagi.");
+    Swal.fire({
+      title: "Error!",
+      text: "Failed to save data, please try again.",
+      icon: "error",
+      confirmButtonText: "OK",
+    });
   }
 }
 
@@ -54,28 +76,31 @@ async function fetchData() {
   try {
     const querySnapshot = await getDocs(collection(db, "invitations"));
 
+    // Check if the carousel is already initialized and destroy it
+    if ($(".owl-carousel").data("owl.carousel")) {
+      $(".owl-carousel").trigger("destroy.owl.carousel");
+      $(".owl-carousel").html(""); // Clear existing Owl Carousel content
+    }
+
     // Loop through each document and add data to carousel
     querySnapshot.forEach((doc) => {
       const data = doc.data();
       dataCarousel.innerHTML += `
-    
-        <div class="card p-3 mt-5" >
-            <p><strong>Nama:</strong> ${data.nama}</p>
-            <p><strong>Status Kehadiran:</strong> ${
-              data.status === "1"
-                ? '<i class="fa-solid fa-square-check text-success"></i>'
-                : "Tidak hadir"
-            }</p>
+        <div class="card p-3 mt-5">
+            <p><strong>${data.nama}</strong> <span> ${
+        data.status === "1"
+          ? '<i class="fa-solid fa-square-check text-success fa-xl"></i>'
+          : '<i class="fa-solid fa-square-xmark text-danger"></i>'
+      } </span> </p>
             <p><strong>Pesan:</strong> "${data.pesan}"</p>
             <p><strong>Timestamp:</strong> ${data.timestamp
               .toDate()
               .toLocaleString()}</p>
         </div>
-      
       `;
     });
 
-    // Reinitialize Owl Carousel after data is added
+    // Reinitialize Owl Carousel after adding new content
     $(".owl-carousel").owlCarousel({
       loop: false,
       margin: 30,

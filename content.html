@@ -19,6 +19,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Sweet alert 2 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <link
       rel="stylesheet"
       href="./assets/simplyCountdown.js-master/css/simplyCountdown.theme.default.css"
@@ -502,6 +510,76 @@
               class="owl-carousel d-flex justify-content-center transition-scale-scroll text-white"
               id="dataCarousel"
             ></div>
+
+            <h1
+              class="text-center text-white transition-scale-scroll"
+              style="margin-top: 100px"
+            >
+              Wedding Gift
+            </h1>
+            <p class="text-center text-white transition-scale-scroll">
+              Doa dan restu Anda adalah anugerah yang sangat berarti bagi kami.
+              Namun, jika berkenan memberikan tanda kasih, Anda dapat
+              mengirimkannya secara cashless.
+            </p>
+
+            <!-- BCA -->
+            <div class="bank-content">
+              <div
+                class="card text-center transition-flip-360"
+                style="margin-top: 50px"
+              >
+                <div class="card-header">
+                  <img class="bank-logo" src="./img/bca.png" alt="" />
+                </div>
+                <div
+                  class="card-body bg-transparent"
+                  style="
+                    background-image: url('https://i.pinimg.com/564x/f1/fb/f2/f1fbf23b2307cec772995f48436c2f02.jpg');
+                  "
+                >
+                  <h5 class="card-title bank-number">3910096400</h5>
+                  <p class="card-text bank-name">Rizal Liyan Syah</p>
+                </div>
+                <div
+                  class="card-footer row justify-content-center text-body-secondary"
+                >
+                  <button class="btn shadow-sm" onclick="copyAccountNumber()">
+                    <i class="fa-solid fa-copy"></i> Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- DANA -->
+
+            <div class="bank-content">
+              <div
+                class="card text-center transition-flip-360"
+                style="margin-top: 50px"
+              >
+                <div class="card-header">
+                  <img class="dana-logo" src="./img/dana.png" alt="" />
+                </div>
+                <div
+                  class="card-body bg-transparent"
+                  style="
+                    background-image: url('https://i.pinimg.com/564x/f1/fb/f2/f1fbf23b2307cec772995f48436c2f02.jpg');
+                  "
+                >
+                  <h5 class="card-title bank-number">3910096400</h5>
+                  <p class="card-text">Rizal Liyan Syah</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+                <div
+                  class="card-footer row justify-content-center text-body-secondary"
+                >
+                  <button class="btn shadow-sm">
+                    <i class="fa-solid fa-copy"></i> Copy
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -529,6 +607,8 @@
 
     <!-- Firestore setup -->
     <script type="module" src="./rsvp.js"></script>
+
+    <script src="./gift.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
