@@ -320,17 +320,17 @@
       <!-- end story section -->
       <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
       <!-- gallery section -->
-      <section
-        id="gallery"
-        class="gallery w-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white"
-      >
+      <section id="gallery" class="gallery p-3 text-center d-flex text-white">
         <video autoplay muted loop class="background-video">
           <source src="./img/video1.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div class="container">
           <div class="row justify-content-center align-items-center">
-            <h1 class="heading-title text-center transition-scale-scroll mt-3">
+            <h1
+              class="heading-title text-center transition-scale-scroll"
+              style="margin-top: 100px"
+            >
               Our Gallery
             </h1>
             <article>
@@ -339,87 +339,104 @@
                 paling indah. Saat ini, kami menanti hari penuh berkah kami."
               </p>
             </article>
+          </div>
 
-            <!-- photos -->
-            <div class="container">
-              <div class="row p-3 row-cols-md-4 row-cols-sm-3 row-cols-2">
-                <div
-                  class="col mt-3 transition-scale-scroll gallery-shadow-img transition-flip-360 p-3"
+          <!-- photos -->
+          <!-- Bootstrap Modal Structure -->
+          <div class="container">
+            <div class="row p-3 row-cols-md-4 row-cols-sm-3 row-cols-2">
+              <div
+                class="col mt-3 transition-scale-scroll gallery-shadow-img transition-flip-360 p-3"
+              >
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  data-bs-img-src="https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg"
+                  data-bs-index="0"
                 >
-                  <a
-                    href="https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg"
-                  >
-                    <img
-                      class="img-thumbnail rounded-lg"
-                      src="https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg"
-                      alt=""
-                    />
-                  </a>
+                  <img
+                    class="img-thumbnail rounded-lg"
+                    src="https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div
+                class="col mt-3 transition-scale-scroll gallery-shadow-img transition-flip-360 p-3"
+              >
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#imageModal"
+                  data-bs-img-src="https://i.pinimg.com/564x/91/27/46/912746cbc50756032266eaefcb87a269.jpg"
+                  data-bs-index="1"
+                >
+                  <img
+                    class="img-thumbnail rounded-lg"
+                    src="https://i.pinimg.com/564x/91/27/46/912746cbc50756032266eaefcb87a269.jpg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <!-- Add more images as needed -->
+            </div>
+          </div>
+
+          <!-- Modal for displaying images -->
+          <div
+            class="modal fade"
+            id="imageModal"
+            tabindex="-1"
+            aria-labelledby="imageModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <!-- Close Button -->
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
                 </div>
-                <div
-                  class="col mt-3 transition-scale-scroll gallery-shadow-img transition-flip-360 p-3"
+
+                <!-- Carousel-like navigation buttons -->
+                <button
+                  id="prevBtn"
+                  class="btn btn-link position-absolute top-50 translate-middle-y"
+                  style="
+                    z-index: 999;
+                    color: white;
+                    font-size: 30px;
+                    background: black;
+                    border: solid 1px white;
+                    margin-left: -100px;
+                  "
                 >
-                  <a
-                    href="https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg"
-                  >
-                    <img
-                      class="img-thumbnail rounded-lg"
-                      src="https://i.pinimg.com/564x/91/27/46/912746cbc50756032266eaefcb87a269.jpg"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div
-                  class="col mt-3 transition-scale-scroll gallery-shadow-img transition-flip-360 p-3"
+                  <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button
+                  id="nextBtn"
+                  class="btn btn-link position-absolute top-50 translate-middle-y"
+                  style="
+                    z-index: 999;
+                    position: absolute;
+                    right: 0;
+                    color: white;
+                    border: solid 1px white;
+                    margin-right: -100px;
+                    font-size: 30px;
+                    background: black;
+                  "
                 >
-                  <a
-                    href="https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg"
-                  >
-                    <img
-                      class="img-thumbnail rounded-lg"
-                      src="https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div
-                  class="col mt-3 transition-scale-scroll gallery-shadow-img transition-flip-360 p-3"
-                >
-                  <a
-                    href="https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg"
-                  >
-                    <img
-                      class="img-thumbnail rounded-lg"
-                      src="https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div
-                  class="col mt-3 transition-scale-scroll gallery-shadow-img transition-flip-360 p-3"
-                >
-                  <a
-                    href="https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg"
-                  >
-                    <img
-                      class="img-thumbnail rounded-lg"
-                      src="https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div
-                  class="col mt-3 transition-scale-scroll gallery-shadow-img transition-flip-360 p-3"
-                >
-                  <a
-                    href="https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg"
-                  >
-                    <img
-                      class="img-thumbnail rounded-lg"
-                      src="https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg"
-                      alt=""
-                    />
-                  </a>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <div class="modal-body text-center position-relative">
+                  <!-- Image display -->
+                  <img id="modalImage" class="img-fluid" src="" alt="" />
                 </div>
               </div>
             </div>
@@ -593,6 +610,46 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      // Image sources and their index
+      const imageLinks = document.querySelectorAll('[data-bs-toggle="modal"]');
+      const images = [
+        "https://i.pinimg.com/564x/be/f5/1e/bef51eb072f9944553181d078bae17c5.jpg",
+        "https://i.pinimg.com/564x/91/27/46/912746cbc50756032266eaefcb87a269.jpg",
+        // Add other images here...
+      ];
+
+      let currentIndex = 0; // Track the current image index
+
+      // Update modal image when clicked
+      imageLinks.forEach((link) => {
+        link.addEventListener("click", function (event) {
+          currentIndex = parseInt(this.getAttribute("data-bs-index")); // Get the index of clicked image
+          document.getElementById("modalImage").src = images[currentIndex];
+        });
+      });
+
+      // Function to show the next image
+      function showNextImage() {
+        currentIndex = (currentIndex + 1) % images.length; // Wrap around if we go past the last image
+        document.getElementById("modalImage").src = images[currentIndex];
+      }
+
+      // Function to show the previous image
+      function showPrevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length; // Wrap around if we go before the first image
+        document.getElementById("modalImage").src = images[currentIndex];
+      }
+
+      // Event listeners for the next/prev buttons
+      document
+        .getElementById("nextBtn")
+        .addEventListener("click", showNextImage);
+      document
+        .getElementById("prevBtn")
+        .addEventListener("click", showPrevImage);
+    </script>
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
