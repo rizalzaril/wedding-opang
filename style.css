@@ -774,6 +774,10 @@ h1 {
     min-height: 200vh;
   }
 
+  .owl-carousel {
+    margin-top: 150px;
+  }
+
   .heading-2-title {
     font-size: 2.5rem;
   }
