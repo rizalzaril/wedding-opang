@@ -1051,7 +1051,7 @@ h1 {
 
   .bg-img-oval-opening {
     overflow: hidden;
-    width: 150px; /* Adjust the width to a smaller value */
+    width: 180px; /* Adjust the width to a smaller value */
     height: 250px; /* Make the height larger than the width */
   }
 
