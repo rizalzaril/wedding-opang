@@ -1041,6 +1041,14 @@ h1 {
     height: 200%;
   }
 
+  .pembukaan {
+    min-height: 150vh;
+  }
+
+  .pembukaan::before {
+    height: 100%;
+  }
+
   /* .gallery {
     min-height: 200vh;
   }
