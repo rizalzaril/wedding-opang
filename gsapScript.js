@@ -78,7 +78,7 @@ gsap.utils.toArray(".transition-scale-scroll").forEach((element, index) => {
   gsap.to(element, {
     scrollTrigger: {
       trigger: element,
-      start: "top 85%", // Starts animation slightly later for a softer entrance
+      // start: "top 85%", // Starts animation slightly later for a softer entrance
       toggleActions: "restart none restart none",
       markers: true, // Hide markers for a cleaner look
     },
@@ -91,17 +91,20 @@ gsap.utils.toArray(".transition-scale-scroll").forEach((element, index) => {
   });
 });
 
-gsap.to(".col-home-scroll-up", {
-  scrollTrigger: {
-    trigger: ".col-home-scroll-up",
-    // start: "top center bottom",
-    //scrub: true,
-    // markers: true,
-    toggleActions: "restart none restart none",
-  },
-  x: 0,
-  opacity: 1,
-  duration: 1.5,
+// Select all elements with the class '.col-home-scroll-up'
+document.querySelectorAll(".col-home-scroll-up").forEach((element) => {
+  gsap.to(element, {
+    scrollTrigger: {
+      trigger: element,
+      // start: "top center bottom",
+      // scrub: true,
+      // markers: true,
+      toggleActions: "restart none restart none",
+    },
+    x: 0,
+    opacity: 1,
+    duration: 1.5,
+  });
 });
 
 gsap.to(".col-home-scroll-down", {
