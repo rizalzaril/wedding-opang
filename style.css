@@ -1049,6 +1049,20 @@ h1 {
     height: 110%;
   }
 
+  .bg-img-oval-opening {
+    overflow: hidden;
+    width: 150px; /* Adjust the width to a smaller value */
+    height: 250px; /* Make the height larger than the width */
+  }
+
+  .oval-img {
+    width: 100%; /* Ensures the image fills the container's width */
+    height: 100%; /* Ensures the image fills the container's height */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio while filling the container */
+    border-radius: 50%; /* Makes the image oval (elongated vertically) */
+    border: solid 0.3rem white;
+  }
+
   /* .gallery {
     min-height: 200vh;
   }
