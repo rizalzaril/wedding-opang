@@ -778,13 +778,13 @@ h1 {
     font-size: 2.5rem;
   }
 
-  .info-acara {
+  /* .info-acara {
     min-height: 100vh;
   }
 
   .info-acara::before {
     height: 100%;
-  }
+  } */
 
   .mempelai {
     min-height: 100vh;
@@ -794,11 +794,11 @@ h1 {
     width: 80%;
   }
 
-  .story {
+  /* .story {
     min-height: 100vh;
-  }
+  } */
 
-  .gallery {
+  /* .gallery {
     min-height: 200vh;
   }
 
@@ -811,19 +811,19 @@ h1 {
     background-position: center;
     width: 100%;
     object-fit: cover;
-  }
+  } */
 
   .gallery .img-thumbnail {
     height: 100%;
   }
 
-  .rsvp {
+  /* .rsvp {
     min-height: 200vh;
   }
 
   .rsvp::before {
     height: 200%;
-  }
+  } */
 
   .owl-carousel {
     margin-top: 150px;
@@ -974,7 +974,7 @@ h1 {
     width: 300px;
   }
 
-  .info::before {
+  /* .info::before {
     height: 200%;
   }
 
@@ -984,7 +984,7 @@ h1 {
 
   .mempelai::before {
     height: 200%;
-  }
+  } */
 
   .timeline li .timeline-img {
     width: 100px;
@@ -1004,7 +1004,7 @@ h1 {
     top: 31px;
   }
 
-  .pembukaan {
+  /* .pembukaan {
     min-height: 125vh;
   }
 
@@ -1014,15 +1014,15 @@ h1 {
 
   .gallery::before {
     height: 100%;
-  }
+  } */
 
-  .rsvp {
+  /* .rsvp {
     min-height: 300vh;
   }
 
   .rsvp::before {
     height: 250%;
-  }
+  } */
 }
 
 @media (max-width: 450px) {
@@ -1078,9 +1078,9 @@ h1 {
     margin: 1;
   }
 
-  .info {
+  /* .info {
     min-height: 150vh;
-  }
+  } */
 
   /* .gallery {
     min-height: 250vh;
