@@ -1063,6 +1063,10 @@ h1 {
     border: solid 0.3rem white;
   }
 
+  .info-acara {
+    min-height: 100vh;
+  }
+
   .card-info {
     width: 250px;
   }
