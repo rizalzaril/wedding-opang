@@ -1123,7 +1123,7 @@ h1 {
   }
 
   .story {
-    min-height: 120vh;
+    min-height: 100vh;
   }
 
   .story::before {
