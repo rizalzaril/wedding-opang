@@ -1089,11 +1089,11 @@ h1 {
   }
 
   .pembukaan {
-    min-height: 110vh;
+    min-height: 100vh;
   }
 
   .pembukaan::before {
-    height: 110%;
+    height: 120%;
   }
 
   .bg-img-oval-opening {
