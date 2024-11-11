@@ -1067,6 +1067,10 @@ h1 {
     min-height: 100vh;
   }
 
+  .info-acara::before {
+    height: 110%;
+  }
+
   .card-info {
     width: 250px;
   }
