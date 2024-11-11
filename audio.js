@@ -19,12 +19,23 @@ function toggleAudio() {
 
 // Attempt to start playing audio automatically on page load
 window.addEventListener("DOMContentLoaded", () => {
-  // Check if audio can autoplay; if not, wait for user interaction to play it
+  // Attempt to play audio (muted) to comply with autoplay policy
   audio.play().catch((error) => {
     console.warn("Autoplay was prevented, requiring user interaction.");
     // Change the icon to play if autoplay is blocked
     audioIcon.classList.remove("fa-pause");
     audioIcon.classList.add("fa-play");
     audioIcon.style.animation = "none"; // No animation on play icon
+  });
+
+  // Unmute the audio after the user interacts with the page
+  audio.addEventListener("click", () => {
+    if (audio.muted) {
+      audio.muted = false;
+      audio.play();
+      audioIcon.classList.remove("fa-play");
+      audioIcon.classList.add("fa-pause");
+      audioIcon.style.animation = "spin 2s linear infinite"; // Add spinning animation when playing
+    }
   });
 });
