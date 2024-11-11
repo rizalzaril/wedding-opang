@@ -586,7 +586,27 @@ h1 {
   width: 100%; /* Full width */
   height: 250%; /* Full height */
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    /* Dark gradient overlay */ url("./img/opening.webp");
+    /* Dark gradient overlay */ url("./img/harbour.png");
+
+  background-size: cover; /* Scales image to cover the area */
+  background-position: center; /* Centers the background image */
+  z-index: -1;
+  background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
+.closing {
+  min-height: 100vh;
+}
+
+.closing::before {
+  content: "";
+  position: absolute;
+  top: 1;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    /* Dark gradient overlay */ url("./img/harbour.png");
 
   background-size: cover; /* Scales image to cover the area */
   background-position: center; /* Centers the background image */
@@ -1095,19 +1115,23 @@ h1 {
   }
 
   .info-acara {
-    min-height: 140vh;
+    min-height: 120vh;
   }
 
   .info-acara::before {
-    height: 160%;
+    height: 120%;
   }
 
   .story {
-    min-height: 130vh;
+    min-height: 120vh;
   }
 
   .story::before {
-    height: 150%;
+    height: 120%;
+  }
+
+  .story .background-video {
+    height: 100%;
   }
 
   .card-info {
@@ -1115,19 +1139,29 @@ h1 {
   }
 
   .gallery {
-    min-height: 200vh;
+    min-height: 300vh;
   }
 
   .gallery::before {
-    height: 200%;
+    height: 100%;
   }
 
   .rsvp {
-    min-height: 250vh;
+    min-height: 200vh;
   }
 
   .rsvp::before {
-    height: 260%;
+    height: 200%;
+  }
+
+  .closing {
+    min-height: 100vh;
+    margin-top: 300px;
+  }
+
+  .closing::before {
+    height: 100%;
+    margin-top: 200px;
   }
 
   #imageModal .modal-dialog {
