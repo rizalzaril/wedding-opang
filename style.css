@@ -1123,11 +1123,11 @@ h1 {
   }
 
   .rsvp {
-    min-height: 150vh;
+    min-height: 250vh;
   }
 
   .rsvp::before {
-    height: 160%;
+    height: 260%;
   }
 
   #imageModal .modal-dialog {
