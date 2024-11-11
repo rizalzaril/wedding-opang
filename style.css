@@ -1068,11 +1068,11 @@ h1 {
   }
 
   .info-acara {
-    min-height: 125vh;
+    min-height: 150vh;
   }
 
   .info-acara::before {
-    height: 125%;
+    height: 150%;
   }
 
   .card-info {
