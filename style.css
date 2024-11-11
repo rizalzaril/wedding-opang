@@ -1067,19 +1067,13 @@ h1 {
     width: 250px;
   }
 
-  /* .gallery {
+  .gallery {
     min-height: 200vh;
   }
 
   .gallery::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 87.85%;
-    z-index: 0; 
-  } */
+    height: 200%;
+  }
 
   #imageModal .modal-dialog {
     width: 90%;
