@@ -1123,15 +1123,15 @@ h1 {
   }
 
   .story {
-    min-height: 120vh;
+    min-height: 50vh;
   }
 
   .story::before {
-    height: 150%;
+    height: 50%;
   }
 
   .story .background-video {
-    height: 120%;
+    height: 50%;
   }
 
   .card-info {
