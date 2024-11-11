@@ -326,25 +326,27 @@ h1 {
 }
 
 .story {
-  position: relative;
   min-height: 125vh;
-  overflow: hidden;
+}
+.story::before {
+  content: "";
+  position: absolute;
+  top: 1;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 150%; /* Full height */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    /* Dark gradient overlay */ url("./img/river-yellow.png");
+
+  background-size: cover; /* Scales image to cover the area */
+  background-position: center; /* Centers the background image */
+  z-index: 0;
+  background-repeat: no-repeat; /* Prevent repeating the image */
 }
 
 .story p {
   /* color: white; */
   color: #000;
-}
-
-.story::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
-  z-index: 0; /* Overlay the video */
 }
 
 .timeline {
