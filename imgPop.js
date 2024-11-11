@@ -14,33 +14,47 @@ const images = [
 
 // Generate gallery dynamically
 const gallery = document.getElementById("imgGallery");
-images.map((imageSrc, index) => {
-  const col = document.createElement("div");
-  col.classList.add(
-    "col",
-    "mt-3",
-    "col-home-scroll-up",
-    "gallery-shadow-img",
-    "transition-flip-360",
-    "p-3"
-  );
 
-  const link = document.createElement("a");
-  link.href = "#";
-  link.setAttribute("data-bs-toggle", "modal");
-  link.setAttribute("data-bs-target", "#imageModal");
-  link.setAttribute("data-bs-img-src", imageSrc);
-  link.setAttribute("data-bs-index", index);
+if (images.length === 0) {
+  // Display a message if no images are available
+  const message = document.createElement("p");
+  message.textContent = "No images available";
+  message.classList.add("text-center", "mt-3");
+  gallery.appendChild(message);
+} else {
+  images.map((imageSrc, index) => {
+    if (imageSrc) {
+      // Only create elements if imageSrc exists
+      const col = document.createElement("div");
+      col.classList.add(
+        "col",
+        "mt-3",
+        "col-home-scroll-up",
+        "gallery-shadow-img",
+        "transition-flip-360",
+        "p-3"
+      );
 
-  const img = document.createElement("img");
-  img.classList.add("img-thumbnail", "rounded-lg");
-  img.src = imageSrc;
-  img.alt = "";
+      const link = document.createElement("a");
+      link.href = "#";
+      link.setAttribute("data-bs-toggle", "modal");
+      link.setAttribute("data-bs-target", "#imageModal");
+      link.setAttribute("data-bs-img-src", imageSrc);
+      link.setAttribute("data-bs-index", index);
 
-  link.appendChild(img);
-  col.appendChild(link);
-  gallery.appendChild(col);
-});
+      const img = document.createElement("img");
+      img.classList.add("img-thumbnail", "rounded-lg");
+      img.src = imageSrc;
+      img.alt = "";
+
+      link.appendChild(img);
+      col.appendChild(link);
+      gallery.appendChild(col);
+    }
+  });
+}
+
+// Generate gallery dynamically
 
 // Modal image update and navigation logic
 let currentIndex = 0; // Track the current image index

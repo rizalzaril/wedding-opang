@@ -16,6 +16,33 @@ body {
   background-color: #0a0a0a;
 }
 
+.audio-icon-wrapper {
+  position: fixed;
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  bottom: 4rem;
+  right: 4rem;
+  color: #ffffff;
+  opacity: 0.7;
+  animation: rotate-disc 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+@keyframes rotate-disc {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .hero::before {
   content: "";
   position: absolute;
@@ -24,7 +51,7 @@ body {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("./img/hero-bg.jpg");
+    url("./img/opening.webp");
   background-size: cover; /* Scales image to cover the area */
   background-position: center; /* Centers the background image */ /* Adjusts transparency for better readability */
   z-index: -1;
@@ -1073,6 +1100,14 @@ h1 {
 
   .info-acara::before {
     height: 160%;
+  }
+
+  .story {
+    min-height: 100vh;
+  }
+
+  .story::before {
+    height: 110%;
   }
 
   .card-info {

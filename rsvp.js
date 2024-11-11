@@ -5,6 +5,8 @@ import {
   collection,
   addDoc,
   getDocs,
+  query,
+  orderBy,
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
 // Firebase configuration
@@ -20,6 +22,30 @@ const firebaseConfig = {
 // Initialize Firebase and Firestore
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+
+// Utility function to calculate relative time
+function timeAgo(date) {
+  const now = new Date();
+  const secondsAgo = Math.floor((now - date) / 1000);
+
+  const intervals = [
+    { label: "year", seconds: 31536000 },
+    { label: "month", seconds: 2592000 },
+    { label: "week", seconds: 604800 },
+    { label: "day", seconds: 86400 },
+    { label: "hour", seconds: 3600 },
+    { label: "minute", seconds: 60 },
+    { label: "second", seconds: 1 },
+  ];
+
+  for (const interval of intervals) {
+    const count = Math.floor(secondsAgo / interval.seconds);
+    if (count >= 1) {
+      return `${count} ${interval.label}${count > 1 ? "s" : ""} ago`;
+    }
+  }
+  return "Just now";
+}
 
 // Function to save form data with validation
 async function saveFormData(event) {
@@ -50,7 +76,7 @@ async function saveFormData(event) {
 
     Swal.fire({
       title: "Success!",
-      text: "Data data berhasil terkirim.",
+      text: "Data berhasil terkirim.",
       icon: "success",
       confirmButtonText: "OK",
     });
@@ -67,12 +93,6 @@ async function saveFormData(event) {
     });
   }
 }
-
-// Function to fetch and display data from Firestore in Owl Carousel
-import {
-  query,
-  orderBy,
-} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
 // Function to fetch and display data from Firestore in Owl Carousel
 async function fetchData() {
@@ -98,17 +118,22 @@ async function fetchData() {
     // Loop through each document and add data to carousel
     querySnapshot.forEach((doc) => {
       const data = doc.data();
+      const timestamp = data.timestamp.toDate(); // Convert Firebase Timestamp to Date
+      const timeAgoText = timeAgo(timestamp); // Get relative time
+
       dataCarousel.innerHTML += `
         <div class="card p-3 mt-5">
-            <p><strong>${data.nama}</strong> <span> ${
-        data.status === "1"
-          ? '<i class="fa-solid fa-square-check text-success fa-xl"></i>'
-          : '<i class="fa-solid fa-square-xmark text-danger"></i>'
-      } </span> </p>
-            <p><strong>Pesan:</strong> "${data.pesan}"</p>
-            <p><strong>Timestamp:</strong> ${data.timestamp
-              .toDate()
-              .toLocaleString()}</p>
+            <p><strong>${data.nama}</strong> 
+              <span> 
+                ${
+                  data.status === "1"
+                    ? '<i class="fa-solid fa-square-check text-success fa-xl"></i>'
+                    : '<i class="fa-solid fa-square-xmark text-danger fa-xl"></i>'
+                } 
+              </span> 
+            </p>
+            <p> "${data.pesan}"</p>
+            <p> ${timeAgoText}</p>
         </div>
       `;
     });
@@ -122,15 +147,9 @@ async function fetchData() {
       autoplayTimeout: 5000,
       autoplayHoverPause: true,
       responsive: {
-        0: {
-          items: 1,
-        },
-        600: {
-          items: 2,
-        },
-        1000: {
-          items: 3,
-        },
+        0: { items: 1 },
+        600: { items: 2 },
+        1000: { items: 3 },
       },
     });
   } catch (error) {
