@@ -1103,11 +1103,11 @@ h1 {
   }
 
   .story {
-    min-height: 120vh;
+    min-height: 200vh;
   }
 
   .story::before {
-    height: 120%;
+    height: 200%;
   }
 
   .card-info {
