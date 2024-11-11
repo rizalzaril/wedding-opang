@@ -1070,11 +1070,11 @@ h1 {
   }
 
   .story {
-    min-height: 200vh;
+    min-height: 150vh;
   }
 
   .story::before {
-    height: 200%;
+    height: 150%;
   }
 
   .story .background-video {
