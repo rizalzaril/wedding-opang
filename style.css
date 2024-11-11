@@ -833,44 +833,9 @@ h1 {
     height: 100%;
   } */
 
-  .mempelai {
-    min-height: 100vh;
-  }
-
-  .mempelai .figure-img {
-    width: 80%;
-  }
-
-  /* .story {
-    min-height: 100vh;
-  } */
-
-  /* .gallery {
-    min-height: 200vh;
-  }
-
-  .gallery::before {
-    height: 100%;
-  }
-
-  .gallery .background-video {
-    height: 100%;
-    background-position: center;
-    width: 100%;
-    object-fit: cover;
-  } */
-
   .gallery .img-thumbnail {
     height: 100%;
   }
-
-  /* .rsvp {
-    min-height: 200vh;
-  }
-
-  .rsvp::before {
-    height: 200%;
-  } */
 
   .owl-carousel {
     margin-top: 150px;
@@ -1021,18 +986,6 @@ h1 {
     width: 300px;
   }
 
-  /* .info::before {
-    height: 200%;
-  }
-
-  .mempelai {
-    min-height: 170vh;
-  }
-
-  .mempelai::before {
-    height: 200%;
-  } */
-
   .timeline li .timeline-img {
     width: 100px;
     height: 100px;
@@ -1113,7 +1066,7 @@ h1 {
   }
 
   .info-acara::before {
-    height: 120%;
+    height: 200%;
   }
 
   .story {
