@@ -1122,6 +1122,14 @@ h1 {
     height: 200%;
   }
 
+  .rsvp {
+    min-height: 150vh;
+  }
+
+  .rsvp::before {
+    height: 160%;
+  }
+
   #imageModal .modal-dialog {
     width: 90%;
     max-width: 90%; /* Ensures it doesn't grow too large on very wide screens */
