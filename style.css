@@ -1066,6 +1066,8 @@ h1 {
     height: 100%;
   }
 
+  
+
   .rsvp {
     min-height: 200vh;
   }
@@ -1083,6 +1085,16 @@ h1 {
     height: 100%;
     margin-top: 200px;
   } */
+
+  .gallery img {
+    width: 100%;
+  }
+
+  .gallery .img-thumbnail {
+    overflow: hidden;
+    height: 250px;
+    width: 150px;
+  }
 
   #imageModal .modal-dialog {
     width: 90%;
