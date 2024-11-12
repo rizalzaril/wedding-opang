@@ -1131,11 +1131,11 @@ h1 {
   }
 
   .pembukaan {
-    min-height: 150vh;
+    min-height: 100vh;
   }
 
   .pembukaan::before {
-    height: 150%;
+    height: 100%;
   }
 
   .mempelai {
