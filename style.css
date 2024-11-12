@@ -531,7 +531,7 @@ h1 {
   top: 1;
   left: 0;
   width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  height: 120%; /* Full height */
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     /* Dark gradient overlay */ url("./img/river-yellow.png");
 
