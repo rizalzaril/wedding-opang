@@ -213,7 +213,7 @@
       <!-- Story Section -->
       <section
         id="story"
-        class="story w-100 bg-white h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white"
+        class="story w-100 bg-white p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white"
       >
         <div class="container">
           <div class="row justify-content-center align-items-center">
@@ -304,8 +304,74 @@
       <!-- End Story Section -->
 
       <!-- Gallery Section -->
-      <section id="gallery" class="gallery p-3 text-center d-flex text-white">
-        <h1>asd</h1>
+      <section
+        id="gallery"
+        class="gallery p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white"
+      >
+        <div class="container">
+          <div class="row justify-content-center align-items-center">
+            <h1
+              class="heading-title text-center transition-scale-scroll"
+              style="margin-top: 100px"
+            >
+              Our Gallery
+            </h1>
+            <article>
+              <p class="text-center text-white transition-scale-scroll mt-3">
+                "Dengan penuh syukur, kami dipertemukan Allah di saat yang
+                paling indah. Saat ini, kami menanti hari penuh berkah kami."
+              </p>
+            </article>
+          </div>
+
+          <div
+            class="row p-3 row-cols-md-4 row-cols-sm-3 row-cols-2"
+            id="imgGallery"
+          >
+            <!-- Dynamic content will be inserted here -->
+          </div>
+
+          <div
+            class="modal fade"
+            id="imageModal"
+            tabindex="-1"
+            aria-labelledby="imageModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <button
+                  id="prevBtn"
+                  class="btn btn-link position-absolute top-50 translate-middle-y"
+                >
+                  <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button
+                  id="nextBtn"
+                  class="btn btn-link position-absolute top-50 translate-middle-y"
+                >
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <div class="modal-body text-center position-relative">
+                  <img
+                    id="modalImage"
+                    class="img-fluid"
+                    src=""
+                    alt="Gallery image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <!-- End Gallery Section -->
 
