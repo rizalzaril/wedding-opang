@@ -1130,6 +1130,14 @@ h1 {
     margin: 1;
   }
 
+  .pembukaan {
+    min-height: 150vh;
+  }
+
+  .pembukaan::before {
+    height: 150%;
+  }
+
   .mempelai {
     min-height: 120vh;
   }
