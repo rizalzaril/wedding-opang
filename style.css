@@ -518,11 +518,7 @@ h1 {
 }
 
 .mempelai {
-  min-height: 100vh;
-}
-
-.mempelai .figure-img {
-  width: 50%;
+  min-height: 120vh;
 }
 
 .mempelai::before {
@@ -539,6 +535,10 @@ h1 {
   background-position: center; /* Centers the background image */
   z-index: -1;
   background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
+.mempelai .figure-img {
+  width: 50%;
 }
 
 .rsvp {
