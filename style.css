@@ -1130,11 +1130,57 @@ h1 {
     margin: 1;
   }
 
-  /* .info {
-    min-height: 150vh;
-  } */
+  .mempelai {
+    min-height: 120vh;
+  }
 
-  /* .gallery {
-    min-height: 250vh;
-  } */
+  .mempelai::before {
+    height: 130%;
+  }
+
+  .info-acara {
+    min-height: 200vh;
+  }
+
+  .info-acara::before {
+    height: 150%;
+  }
+
+  .story {
+    min-height: 130vh;
+  }
+
+  .story::before {
+    height: 145%;
+  }
+
+  .card-info {
+    width: 250px;
+  }
+
+  .gallery {
+    min-height: 220vh;
+  }
+
+  .gallery::before {
+    height: 100%;
+  }
+
+  .rsvp {
+    min-height: 200vh;
+  }
+
+  .rsvp::before {
+    height: 200%;
+  }
+
+  .closing {
+    min-height: 100vh;
+    margin-top: 300px;
+  }
+
+  .closing::before {
+    height: 100%;
+    margin-top: 200px;
+  }
 }
