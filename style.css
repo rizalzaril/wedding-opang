@@ -1139,11 +1139,11 @@ h1 {
   }
 
   .info-acara {
-    min-height: 120vh;
+    min-height: 100vh;
   }
 
   .info-acara::before {
-    height: 120%;
+    height: 130%;
   }
 
   .story {
