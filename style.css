@@ -1057,6 +1057,10 @@ h1 {
     min-height: 120vh;
   }
 
+  .mempelai::before {
+    height: 120%;
+  }
+
   .info-acara {
     min-height: 120vh;
   }
@@ -1116,7 +1120,7 @@ h1 {
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 378px) {
   html {
     font-size: 40%;
   }
