@@ -8,7 +8,6 @@ const images = [
   "https://i.pinimg.com/564x/91/27/46/912746cbc50756032266eaefcb87a269.jpg",
   "https://i.pinimg.com/564x/91/27/46/912746cbc50756032266eaefcb87a269.jpg",
   "https://i.pinimg.com/564x/91/27/46/912746cbc50756032266eaefcb87a269.jpg",
-  "https://i.pinimg.com/564x/91/27/46/912746cbc50756032266eaefcb87a269.jpg",
   // Add other images here...
 ];
 

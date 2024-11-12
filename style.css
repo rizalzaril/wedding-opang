@@ -306,7 +306,7 @@ h1 {
 }
 
 .info-acara {
-  min-height: 150vh;
+  min-height: 120vh;
 }
 
 .info-acara::before {
@@ -315,7 +315,7 @@ h1 {
   top: 1;
   left: 0;
   width: 100%; /* Full width */
-  height: 150%; /* Full height */
+  height: 120%; /* Full height */
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     /* Dark gradient overlay */ url("./img/harbour.png");
 
@@ -323,6 +323,30 @@ h1 {
   background-position: center; /* Centers the background image */
   z-index: -1;
   background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
+.mempelai {
+  min-height: 125vh;
+}
+
+.mempelai::before {
+  content: "";
+  position: absolute;
+  top: 1;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 125%; /* Full height */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    /* Dark gradient overlay */ url("./img/river-yellow.png");
+
+  background-size: cover; /* Scales image to cover the area */
+  background-position: center; /* Centers the background image */
+  z-index: -1;
+  background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
+.mempelai .figure-img {
+  width: 50%;
 }
 
 .story {
@@ -334,7 +358,7 @@ h1 {
   top: 1;
   left: 0;
   width: 100%; /* Full width */
-  height: 150%; /* Full height */
+  height: 125%; /* Full height */
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     /* Dark gradient overlay */ url("./img/river-yellow.png");
 
@@ -446,24 +470,9 @@ h1 {
   right: auto;
 }
 
-.pembukaan::before {
-  content: "";
-  position: absolute;
-  top: 1;
-  left: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    /* Dark gradient overlay */ url("./img/opening.webp");
-
-  background-size: cover; /* Scales image to cover the area */
-  background-position: center; /* Centers the background image */
-  z-index: -1;
-  background-repeat: no-repeat; /* Prevent repeating the image */
-}
 .gallery {
   position: relative;
-  min-height: 150vh;
+  min-height: 180vh;
   overflow: hidden;
 }
 
@@ -489,12 +498,14 @@ h1 {
 
 .gallery img {
   transition: transform 0.4s ease, background-color 0.4s ease; /* Smooth transition for transform and background-color */
+  object-fit: cover;
+  width: 100%;
 }
 
 .gallery .img-thumbnail {
-  object-fit: cover;
-  width: 100%;
-  height: 300px;
+  overflow: hidden;
+  height: 400px;
+  width: 300px;
 }
 
 .gallery img:hover {
@@ -517,32 +528,24 @@ h1 {
   z-index: -1;
 }
 
-.mempelai {
-  min-height: 120vh;
+.rsvp {
+  min-height: 200vh;
 }
 
-.mempelai::before {
+.rsvp::before {
   content: "";
   position: absolute;
   top: 1;
   left: 0;
   width: 100%; /* Full width */
-  height: 120%; /* Full height */
+  height: 200%; /* Full height */
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    /* Dark gradient overlay */ url("./img/river-yellow.png");
+    /* Dark gradient overlay */ url("./img/harbour.png");
 
   background-size: cover; /* Scales image to cover the area */
   background-position: center; /* Centers the background image */
   z-index: -1;
   background-repeat: no-repeat; /* Prevent repeating the image */
-}
-
-.mempelai .figure-img {
-  width: 50%;
-}
-
-.rsvp {
-  min-height: 250vh;
 }
 
 .rsvp form label {
@@ -564,38 +567,6 @@ h1 {
   font-size: 1.3rem;
 }
 
-.rsvp button {
-  background-color: #000;
-  color: white;
-  border: solid 1px white;
-  padding: 12px;
-  font-size: 1.3rem;
-  float: right;
-  width: 120px;
-}
-
-.rsvp button:hover {
-  background-color: var(--pink);
-  color: black;
-  border: none;
-}
-
-.rsvp::before {
-  content: "";
-  position: absolute;
-  top: 1;
-  left: 0;
-  width: 100%; /* Full width */
-  height: 250%; /* Full height */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    /* Dark gradient overlay */ url("./img/harbour.png");
-
-  background-size: cover; /* Scales image to cover the area */
-  background-position: center; /* Centers the background image */
-  z-index: -1;
-  background-repeat: no-repeat; /* Prevent repeating the image */
-}
-
 .closing {
   min-height: 100vh;
 }
@@ -608,7 +579,7 @@ h1 {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    /* Dark gradient overlay */ url("./img/harbour.png");
+    /* Dark gradient overlay */ url("./img/opening.webp");
 
   background-size: cover; /* Scales image to cover the area */
   background-position: center; /* Centers the background image */
@@ -835,8 +806,14 @@ h1 {
     height: 100%;
   } */
 
+  .gallery img {
+    width: 100%;
+  }
+
   .gallery .img-thumbnail {
-    height: 100%;
+    overflow: hidden;
+    height: 300px;
+    width: 200px;
   }
 
   .owl-carousel {
