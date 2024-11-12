@@ -326,7 +326,7 @@ h1 {
 }
 
 .mempelai {
-  min-height: 125vh;
+  min-height: 135vh;
 }
 
 .mempelai::before {
@@ -335,7 +335,7 @@ h1 {
   top: 1;
   left: 0;
   width: 100%; /* Full width */
-  height: 125%; /* Full height */
+  height: 135%; /* Full height */
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     /* Dark gradient overlay */ url("./img/river-yellow.png");
 
