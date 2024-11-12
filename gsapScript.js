@@ -64,7 +64,7 @@ document
           scrollTrigger: {
             trigger: transitionflip360,
             scrub: false,
-            markers: false,
+            // markers: false,
           },
         });
       },
@@ -80,7 +80,7 @@ gsap.utils.toArray(".transition-scale-scroll").forEach((element, index) => {
       trigger: element,
       // start: "top 85%", // Starts animation slightly later for a softer entrance
       toggleActions: "restart none restart none",
-      markers: true, // Hide markers for a cleaner look
+      // markers: true, // Hide markers for a cleaner look
     },
     scale: 1, // Full scale at the end
     opacity: 1, // Full visibility at the end
