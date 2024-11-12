@@ -1053,7 +1053,7 @@ h1 {
     border: solid 0.3rem white;
   }
 
-  .mempelai {
+  /* .mempelai {
     min-height: 120vh;
   }
 
@@ -1105,7 +1105,7 @@ h1 {
   .closing::before {
     height: 100%;
     margin-top: 200px;
-  }
+  } */
 
   #imageModal .modal-dialog {
     width: 90%;
@@ -1122,7 +1122,7 @@ h1 {
 
 @media (max-width: 378px) {
   html {
-    font-size: 5s0%;
+    font-size: 50%;
   }
 
   .simply-countdown > .simply-section {
@@ -1138,7 +1138,7 @@ h1 {
     height: 100%;
   } */
 
-  .mempelai {
+  /* .mempelai {
     min-height: 120vh;
   }
 
@@ -1160,7 +1160,7 @@ h1 {
 
   .story::before {
     height: 160%;
-  }
+  } */
 
   .card-info {
     width: 250px;
