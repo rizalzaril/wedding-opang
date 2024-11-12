@@ -1159,7 +1159,7 @@ h1 {
   }
 
   .gallery {
-    min-height: 250vh;
+    min-height: 220vh;
   }
 
   .gallery::before {
